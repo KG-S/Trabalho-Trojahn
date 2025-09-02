@@ -1,6 +1,6 @@
 import  Usuarios from '../usuarios'
 import  Produtos from '../produtos'
-import Compras from '../comprar'
+import Compras from '../compras'
 import { useState } from 'react';
 
 function Handle() {
