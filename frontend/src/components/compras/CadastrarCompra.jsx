@@ -1,19 +1,19 @@
 import { useState } from "react";
 
 function CadastrarCompra({ mudou, setMudou }) {
-  const [id_produto, setId] = useState("");
-  const [id_usuario, setIdCliente] = useState("");
+  const [id_produto, setIdProduto] = useState("");
+  const [id_usuario, setIdUsuario] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setId("");
-    setIdCliente("");
+    var idProdInt = parseInt(id_produto)
+    var idUserInt = parseInt(id_usuario)
     fetch("http://localhost:3000/compras", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id_produto, id_usuario }),
+      body: JSON.stringify({ id_produto: idProdInt, id_usuario: idUserInt }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -29,19 +29,19 @@ function CadastrarCompra({ mudou, setMudou }) {
     <>
         <h1>Cadastrar Compra</h1>
         <form onSubmit={handleSubmit}>
-          <label>Id do Cliente</label>
+          <label>Id do Usuário</label>
           <input
             type="number"
             value={id_usuario}
-            onChange={(e) => setIdCliente(e.target.value)}
-            placeholder="Digite o preço"
+            onChange={(e) => setIdUsuario(e.target.value)}
+            placeholder="Digite o id"
           />
           <label>Id do Produto</label>
           <input
             type="number"
             value={id_produto}
-            onChange={(e) => setId(e.target.value)}
-            placeholder="Digite o preço"
+            onChange={(e) => setIdProduto(e.target.value)}
+            placeholder="Digite o id"
           />
           <button type="submit">Cadastro</button>
         </form>
