@@ -1,11 +1,10 @@
 import './App.css'
+import Handle from './components/Handle'
 
 function App() {
-
   return (
     <>
-      <h1>Seja bem vindo!</h1>
-      <p>Desenvolva seu website usando React!</p>
+      <Handle />
     </>
   )
 }
