@@ -57,7 +57,7 @@ function ListarUsuarios({ mudou, setMudou }) {
             <li key={usuario.id}>
               {usuario.id + " " + usuario.nome}
               <button onClick={() => handleDelete(usuario.id)}>Deletar</button>
-              <button onClick={() => setEdit({id: usuario.id, nome: usuario.nome, produtos: usuario.produtos})}>Editar</button>
+              <button onClick={() => setEdit({id: usuario.id, nome: usuario.nome, produtos: usuario.produtos})}>Produtos</button>
             </li>
           ))}
         </ul>

@@ -23,9 +23,9 @@ function CadastrarProdutos({ mudou, setMudou }) {
       .then((res) => res.json())
       .then((data) => {
         console.log("Produto cadastrado:", data);
-        setMudou(!mudou); // Atualiza para disparar recarregamento da lista
-        setNome("");       // Limpa campo nome
-        setPreco("");      // Limpa campo preço
+        setMudou(!mudou); 
+        setNome("");      
+        setPreco("");      
       })
       .catch((err) => {
         console.error("Erro ao cadastrar produto:", err);
