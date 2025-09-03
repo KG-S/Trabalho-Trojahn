@@ -1,6 +1,6 @@
 import { useState } from "react";
-import CadastrarUsuarios from "./CadastrarUsuarios"
-import ListarUsuarios from "./ListarUsuarios"
+import CadastrarCompra from "./CadastrarCompra"
+import ExcluirCompra from "./RemoverCompra"
 import './index.css'
 
 function Compras() {
@@ -10,10 +10,10 @@ function Compras() {
     <>
       <div className="compras-container">
         <div className="cadastrar-compra">
-          <CadastrarUsuarios mudou={mudou} setMudou={setMudou} />
+          <CadastrarCompra mudou={mudou} setMudou={setMudou} />
         </div>
-        <div className="listar-compras">
-          <ListarUsuarios mudou={mudou} setMudou={setMudou} />
+        <div>
+          <ExcluirCompra mudou={mudou} setMudou={setMudou} />
         </div>
       </div>
     </>

@@ -1,5 +1,6 @@
 import  Usuarios from '../usuarios'
 import  Produtos from '../produtos'
+import Compras from '../compras'
 import { useState } from 'react';
 
 function Handle() {
@@ -10,6 +11,7 @@ function Handle() {
       <div className="conteudo">
         <Usuarios mudou={mudou} setMudou={setMudou} />
         <Produtos mudou={mudou} setMudou={setMudou} />
+        <Compras mudou={mudou} setMudou={setMudou} />
       </div>
     </>
   )
